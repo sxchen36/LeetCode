@@ -68,13 +68,13 @@ Dynamic Programming
 (1c) Search a 2D Matrix
 (1c) Search for a Range
 (1c) Search in Rotated Sorted Array
-(1c) Sqrt(x)  -- need think about methods except Binary Search. Many options
+(1c - m) Sqrt(x)  -- need think about methods except Binary Search. Many options
  
  Sequence
  
 (1c) Container With Most Water
 (1c) Count and Say
-(1c) First Missing Positive -- need more practice and understanding
+(1c - m) First Missing Positive -- need more practice and understanding
 Implement strStr()
 Jump Game
 Jump Game II
