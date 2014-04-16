@@ -77,12 +77,12 @@ Dynamic Programming
 (1c) Container With Most Water
 (1c) Count and Say
 (1c - m) First Missing Positive -- need more practice and understanding
-Implement strStr()
-Jump Game
-Jump Game II
-Length of Last Word
-Longest Common Prefix
-Longest Substring Without Repeating Characters
+(unfinisheg skipped)Implement strStr() -- KMP took me too many time... next time maybe my mind could be clearer...
+(1c)Jump Game
+(1c)Jump Game II
+(1c)Length of Last Word
+(1c)Longest Common Prefix
+(1c)Longest Substring Without Repeating Characters
 Merge Sorted Array
 Palindrome Number
 Plus One
