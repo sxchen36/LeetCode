@@ -83,25 +83,25 @@ Dynamic Programming
 (1c)Length of Last Word
 (1c)Longest Common Prefix
 (1c)Longest Substring Without Repeating Characters
-Merge Sorted Array
-Palindrome Number
-Plus One
-Remove Duplicates from Sorted Array
-Remove Duplicates from Sorted Array II
-Remove Element
-Reverse Integer
-Search in Rotated Sorted Array II
-Sort Colors
-Two Sum
+(1c)Merge Sorted Array
+(1c)Palindrome Number
+(1c)Plus One
+(1c)Remove Duplicates from Sorted Array
+(1c)Remove Duplicates from Sorted Array II
+(1c)Remove Element
+(1c)Reverse Integer
+(1c)Search in Rotated Sorted Array II
+(1c)Sort Colors
+(1c -m)Two Sum know Arrays.sort() in Java using dual pivot quicksort. review quicksort and dual quicksort in utility package
 3Sum
-3Sum Closest
-4Sum
-Add Binary
-Longest Palindromic Substring
-Next Permutation
-Longest Valid Parentheses
-Climbing Stairs
-Permutation Sequence
+( -m)3Sum Closest Binary Search only can garuantee that it find the index, if there are duplicates, it's not necesarrily which one among it. To find the range, try to do Binary search twice, find the first and the last one. That also means it's possible to find the first one by keep checking whether its left value is equals to target 
+(1c)4Sum
+(1c)Add Binary
+(1c)Longest Palindromic Substring
+(1c)Next Permutation
+(1c)Longest Valid Parentheses
+(1c)Climbing Stairs
+(1c -m )Permutation Sequence Need to do independently next time!! improve your sense of numbers!
 Simplify Path
 String to Integer (atoi)
 Minimum Window Substring
