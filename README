@@ -102,41 +102,42 @@ Dynamic Programming
 (1c)Longest Valid Parentheses
 (1c)Climbing Stairs
 (1c -m )Permutation Sequence Need to do independently next time!! improve your sense of numbers!
-Simplify Path
-String to Integer (atoi)
-Minimum Window Substring
-Longest Consecutive Sequence
-Trapping Rain Water
-Valid Number
+(1c)Simplify Path
+(1c)String to Integer (atoi)
+(1c)Minimum Window Substring
+(1c)Longest Consecutive Sequence
+(1c)Trapping Rain Water
+( -m)Valid Number (spent too much time... give up... next time)
 
 Linked List
 
-Add Two Numbers
-Convert Sorted List to Binary Search Tree
-Merge Two Sorted Lists
-Partition List
-Remove Duplicates from Sorted List
-Remove Duplicates from Sorted List II
-Remove Nth Node From End of List
-Reverse Linked List II
-Reverse Nodes in k-Group
-Rotate List
-Swap Nodes in Pairs
+(1c)Add Two Numbers
+(1c)Convert Sorted List to Binary Search Tree
+(1c)Merge Two Sorted Lists
+(1c -m)Partition List Need more practice. Donna how to get accepted. 
+(1c)Remove Duplicates from Sorted List
+(1c)Remove Duplicates from Sorted List II
+(1c)Remove Nth Node From End of List
+(1c)Reverse Linked List II
+(1c -m)Reverse Nodes in k-Group Check other's solution. Need to review againi
+(1c)Rotate List
+(1c)Swap Nodes in Pairs
 
 Stack
 
-Binary Tree Inorder Traversal
-Binary Tree Level Order Traversal II
-Valid Parentheses
+(1c)Binary Tree Inorder Traversal
+(1c)Binary Tree Level Order Traversal II
+(1c)Valid Parentheses
 
 Queue
 
-Binary Tree Level Order Traversal
-Binary Tree Level Order Traversal II
-Populating Next Right Pointers in Each Node II
-Symmetric Tree
-Surrounded Regions
-Word Ladder
+(1c)Binary Tree Level Order Traversal
+(1c)Binary Tree Level Order Traversal II
+(1c)Populating Next Right Pointers in Each Node II
+(1c)Symmetric Tree
+(1c)Surrounded Regions
+(1c)Word Ladder
+( -m)Word Ladder too difficult for me right now. Should come back later
 
 Tree
 
@@ -155,3 +156,7 @@ Same Tree
 Sum Root to Leaf Numbers
 Symmetric Tree
 Validate Binary Search Tree
+
+
+Others Added
+(1c -m)Gray Code need more practice!!! bit manipulation!! 
