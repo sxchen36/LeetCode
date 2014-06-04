@@ -182,4 +182,36 @@ public class InterleavingString {
         return map[s1.length()][s2.length()];
     }
         
+    
+    
+    /*第二次刷Leetcode，未验证对错。思路对，但recursion的形式有很多重复，效率很低*/
+//    private boolean helper(String s1, int p1, String s2, int p2, String s3, int p3) {
+//        if (p1 ==  s1.length() && p2==s2.length() && p3==s3.length()) return true;
+//        
+//        if (p1 == s1.length()) {
+//            if (s2.charAt(p2) != s3.charAt(p3)) return false;
+//            return helper(s1, p1, s2, p2+1, s3, p3+1);
+//        }
+//        
+//        if (p2 == s2.length()) {
+//            if (s1.charAt(p1) != s3.charAt(p3)) return false;
+//            return helper(s1, p1+1, s2, p2, s3, p3+1);
+//        }
+//        
+//        if (s3.length() == p3) {
+//            return false;
+//        }
+//        
+//        if (s3.charAt(p3) == s1.charAt(p1)) {
+//            if (s1.charAt(p1) == s2.charAt(p2)) {
+//                return helper(s1, p1+1, s2, p2, s3, p3+1) || helper(s1, p1, s2, p2+1, s3, p3+1);
+//            } else {
+//                return helper(s1, p1+1, s2, p2, s3, p3+1);
+//            }
+//
+//        } else {
+//            return helper(s1, p1, s2, p2+1, s3, p3+1);
+//        }
+//        
+//    }
 }

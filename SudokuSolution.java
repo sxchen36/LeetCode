@@ -106,4 +106,65 @@ public class SudokuSolution {
 //        return true;
 //    }
     
+	
+	
+    /*Backtracking
+     * AC 是上边解法的优化。不用每次都从头找‘.’了，row和col标注出来的是开始扫描‘。’的起点*/
+	 public void solveSudoku(char[][] board) {
+	        helper(board, 0, 0);
+	        
+	    }
+	    
+	    private boolean helper(char[][] board, int row, int col) {
+	        if (row == board.length) {
+	            return true;
+	        } else {
+	            for (int i=row; i<board.length; i++) {
+	                for (int j=0; j<board[0].length; j++) {
+	                    if (i == row && j < col) continue;
+	                    if (board[i][j] == '.') {
+	                        for (int ni=1; ni<10; ni++) {
+	                            char n = (char)('0'+ni);
+	                            if (valid(board, i, j, n)) {
+	                                board[i][j] = n;
+	                                int nrow = 0;
+	                                int ncol = 0;
+	                                if (j == board[0].length-1){
+	                                    nrow = i+1;
+	                                    ncol = 0;
+	                                } else {
+	                                    ncol = j+1;
+	                                }
+	                                if (helper(board, nrow, ncol)) {
+	                                    return true;
+	                                }
+	                            }
+	                        }
+	                        board[i][j] = '.';
+	                        return false;
+	                    }
+	                }
+	            }
+	            return true;
+	        }
+	    }
+	    
+	    private boolean valid(char[][] board, int row, int col, char n) {
+	        for (int i=0; i<board.length; i++) {
+	            if (board[i][col] == n) return false;
+	            if (board[row][i] == n) return false;
+	        }
+	        
+	        int offset = board.length/3;
+	        for (int i=row/offset*offset; i<row/offset*offset+offset; i++) {
+	            for (int j=col/offset*offset; j<col/offset*offset+offset; j++) {
+	                if (i == row && j == col) {
+	                    continue;
+	                } else {
+	                    if (board[i][j] == n) return false;
+	                }
+	            }
+	        }
+	        return true;
+	    }
 }

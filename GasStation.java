@@ -1,6 +1,15 @@
 package Leetcode;
 
 public class GasStation {
+	
+	public static void main(String[] args) {
+		GasStation s = new GasStation();
+		int[] a = {1,2,3,3};
+		int[] b = {2,1,5,1};
+		s.canCompleteCircuit(a, b);
+	}
+	
+	
 	/* Accepted, my 1st attempt
 	 * Brute force. Check routes starting from each gas station
 	 * use remain to keep the remaining gas, add g[j] when it arrive jth station
@@ -44,7 +53,7 @@ public class GasStation {
             	for (int i=0; i<gas.length; i++){
             		remain += gas[round(startPoint+i, gas.length)] - cost[round(startPoint+i, gas.length)];
             		if (remain < 0){
-            			startPoint = startPoint+i; // if it's larger than gas.length, then we've checked all possible starting point, no valid.
+            			startPoint = startPoint+i+1; // if it's larger than gas.length, then we've checked all possible starting point, no valid.
             			break;
             		}
             	}

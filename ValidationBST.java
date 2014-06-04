@@ -50,41 +50,70 @@ public class ValidationBST {
 	 * @author Angel_Death
 	 *
 	 */
-    class BSTInorderIterater {
-        Stack<TreeNode> stack;
-        
-        public BSTInorderIterater(TreeNode root){
-            stack = new Stack<TreeNode>();
-            update(root);
+//    class BSTInorderIterater {
+//        Stack<TreeNode> stack;
+//        
+//        public BSTInorderIterater(TreeNode root){
+//            stack = new Stack<TreeNode>();
+//            update(root);
+//        }
+//        
+//        private void update(TreeNode root){
+//            TreeNode cur = root;
+//            while (cur != null){
+//                stack.push(cur);
+//                cur = cur.left;
+//            }
+//        }
+//        
+//        public boolean hasNext() {
+//            return !stack.isEmpty();
+//        }
+//        
+//        public TreeNode next(){
+//            if (!hasNext()) return null;
+//            TreeNode n = stack.pop();
+//            update(n.right);
+//            return n;
+//        }
+//    }
+//    public boolean isValidBST(TreeNode root) {
+//        BSTInorderIterater it = new BSTInorderIterater(root);
+//        int pre = Integer.MIN_VALUE;
+//        while (it.hasNext()){
+//            int cur = it.next().val;
+//            if (cur <= pre) return false;
+//            pre = cur;
+//        }
+//        return true;
+//    }
+	
+	
+	/**
+	 * 借力iteration的inorder tranverse也很赞！
+	 */
+    public boolean isValidBST(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        if (root == null) return true;
+        int pre = Integer.MIN_VALUE;
+        stack.push(root);
+        TreeNode cur = root.left;
+        while (cur != null) {
+            stack.push(cur);
+            cur = cur.left;
         }
-        
-        private void update(TreeNode root){
-            TreeNode cur = root;
-            while (cur != null){
-                stack.push(cur);
-                cur = cur.left;
+        while (!stack.empty()) {
+            cur = stack.pop();
+            if (cur.val <= pre) return false;
+            pre = cur.val;
+            if (cur.right != null) {
+                cur = cur.right;
+                while (cur != null) {
+                    stack.push(cur);
+                    cur = cur.left;
+                }
             }
         }
-        
-        public boolean hasNext() {
-            return !stack.isEmpty();
-        }
-        
-        public TreeNode next(){
-            if (!hasNext()) return null;
-            TreeNode n = stack.pop();
-            update(n.right);
-            return n;
-        }
-    }
-    public boolean isValidBST(TreeNode root) {
-        BSTInorderIterater it = new BSTInorderIterater(root);
-        int pre = Integer.MIN_VALUE;
-        while (it.hasNext()){
-            int cur = it.next().val;
-            if (cur <= pre) return false;
-            pre = cur;
-        }
         return true;
-    }
+}
 }

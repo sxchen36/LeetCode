@@ -58,38 +58,52 @@ public class MaximumSubarray {
 //        return max;
 //    }
 	
+	/*Most decent solution*/
+    public int maxSubArray(int[] A) {
+        int max = A[0];
+        int count = 0;
+        for (int i=0; i<A.length; i++) {
+            count += A[i];
+            max = Math.max(max, count);
+            if (count < 0) {
+                count = 0;
+            }
+        }
+        return max;
+    }
+	
 	/* Divide and conquer solution*/
 	/* I failed to come up(record) my idea, but the other one's is great
 	 * choose the element in middle, it could be in the max subarray or not
 	 * if it's not, we simply calculate the [0, i-1] [i+1,end]
 	 * if it is in, we find the max purfix subarray from left, max preffix subarray from right sum up
 	 * Choose the largest sum to return*/
-	public int maxSubArray(int[] A) {
-	    return maxSubArrayDivide(A,0,A.length-1);
-    }
-    
-    private int maxSubArrayDivide(int[] A, int left, int right) {
-        if (left == right) return A[left];
-        
-        int middle = (left+right)/2;
-        
-        int leftSum = maxSubArrayDivide(A,left,middle); // could be duplicate when middle is the end of the subarray, but it will be too annoying to avoid this. Let it be
-        int rightSum = maxSubArrayDivide(A,middle+1,right);
-        
-        int leftPart = A[middle];
-        int rightPart = A[middle+1];
-        int tmp = 0;
-        for (int i=middle; i>=left; i--) {
-            tmp += A[i];
-            if (tmp > leftPart) leftPart = tmp;
-        }
-        tmp = 0;
-        for (int i=middle+1; i<=right; i++) {
-            tmp += A[i];
-            if (tmp > rightPart) rightPart = tmp;
-        }
-        return Math.max(Math.max(leftSum, rightSum), leftPart+rightPart);
-        
-    }
+//	public int maxSubArray(int[] A) {
+//	    return maxSubArrayDivide(A,0,A.length-1);
+//    }
+//    
+//    private int maxSubArrayDivide(int[] A, int left, int right) {
+//        if (left == right) return A[left];
+//        
+//        int middle = (left+right)/2;
+//        
+//        int leftSum = maxSubArrayDivide(A,left,middle); // could be duplicate when middle is the end of the subarray, but it will be too annoying to avoid this. Let it be
+//        int rightSum = maxSubArrayDivide(A,middle+1,right);
+//        
+//        int leftPart = A[middle];
+//        int rightPart = A[middle+1];
+//        int tmp = 0;
+//        for (int i=middle; i>=left; i--) {
+//            tmp += A[i];
+//            if (tmp > leftPart) leftPart = tmp;
+//        }
+//        tmp = 0;
+//        for (int i=middle+1; i<=right; i++) {
+//            tmp += A[i];
+//            if (tmp > rightPart) rightPart = tmp;
+//        }
+//        return Math.max(Math.max(leftSum, rightSum), leftPart+rightPart);
+//        
+//    }
 	
 }

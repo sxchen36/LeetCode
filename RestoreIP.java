@@ -11,7 +11,7 @@ public class RestoreIP {
 	 */
 	public static final void main(String[] args){
 		RestoreIP t = new RestoreIP();
-		t.restoreIpAddresses("25525511135");
+		ArrayList<String> res = t.restoreIpAddresses("0000");
 	}
 	
     public ArrayList<String> restoreIpAddresses(String s) {

@@ -107,4 +107,40 @@ public class PalindromePartition2 {
 
     	return cut[n-1];
     }
+    
+    
+    /* 第二次做：Totally Wrong. It won't do better than brute force*/
+//    public int minCut(String s) {
+//        for (int i=0; i<s.length(); i++) {
+//            List<Integer> indexs = new List<Integer>();
+//            for (int j=i+1; j<s.length(); j++) {
+//                if (isPalindrome(i,j,s)) {
+//                    indexs.add(j);
+//                }
+//            }
+//            map.put(i, indexs);
+//        }
+//        
+//        int min = s.length();
+//        for (Integer one : map.get(0)) {
+//            int index = 0;
+//            int count = 0;
+//            while (index != s.length()-1) {
+//                List<Integer> list = map.get(index);
+//                for ()
+//            }
+//        }
+//    }
+//
+//    private boolean isPalindrome(int start, int end, String s) {
+//        if (start == end) return true;
+//        
+//        while (start < end) {
+//            if (s.charAt(start) != s.charAt(end)) return false;
+//            start++;
+//            end--;
+//        }
+//        return true;
+//        
+//    }
 }

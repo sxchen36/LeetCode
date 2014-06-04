@@ -4,13 +4,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
+
+//没有接法呢还！！
 public class SubstringConcatenationAllWords {
-	public static final void main(String[] args){
-		SubstringConcatenationAllWords t = new SubstringConcatenationAllWords();
-		String[] L={"foo","bar"};
-		for (Integer i : t.findSubstring("barfoothefoobarman",L)){
-			System.out.println(i+", ");
-		}
+//	public static final void main(String[] args){
+//		SubstringConcatenationAllWords t = new SubstringConcatenationAllWords();
+//		String[] L={"foo","bar"};
+//		for (Integer i : t.findSubstring("barfoothefoobarman",L)){
+//			System.out.println(i+", ");
+//		}
 	}
 	
 	
@@ -99,4 +101,4 @@ public class SubstringConcatenationAllWords {
 //        }
 //        return true;
 //    }
-}
+//}

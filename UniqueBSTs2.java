@@ -14,6 +14,7 @@ public class UniqueBSTs2 {
 	for DFS, we choose each num in the range as root, then get arraylist l for numbers smaller than it and arraylist r for numbers larger than it, add l.element + n + r.element for each choice to the res list and return the arraylist 
 	Base: start>end then return null
 	
+	笨蛋，这是BFS。 DFS貌似不好做嗯。会有很多重复的
 	Notice the reference variable! for each different tree you need to new a new root!!
 	 */
 	

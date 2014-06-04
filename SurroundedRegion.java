@@ -7,6 +7,8 @@ import CC150.Node;
  * 如果用DFS的话，要用stack做iteration
  * 小总结： iteration的话，DFS用stack BFS用queue
  * 		  recursion的话， DFS直接挨个调用，BFS则用list一层一层存*/
+
+/*第二次做： 思路是对的。但是纯用DFS的recursion stackoverflow了*/
 public class SurroundedRegion {
 	   class Node {
 	        int row;
